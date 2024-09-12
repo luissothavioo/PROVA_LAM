@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     headerCamera: {
         flex: 1,
         alignItems: "center",
+        paddingTop: 40,
     },
     footerCamera: {
         flexDirection: 'row',
@@ -23,12 +24,13 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
     },
     ball: {
-        width: 70,
-        height: 70,
+        width: 60,
+        height: 60,
         backgroundColor: colors.whiteBackground,
         borderRadius: 35,
     },
     headerSave: {
+        paddingTop: 40,
         flexDirection: 'row',
         justifyContent: 'space-between',
     },

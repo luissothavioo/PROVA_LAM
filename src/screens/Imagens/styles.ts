@@ -9,4 +9,9 @@ export const styles = StyleSheet.create({
         width: 200,
         height: 200,
     },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        paddingTop: 40,
+    },
 });

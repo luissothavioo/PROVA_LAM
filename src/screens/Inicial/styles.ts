@@ -4,7 +4,7 @@ import { colors } from "../../styles/globalstyle"
 export const styles = StyleSheet.create({
     //TEXTO
     text: {
-        color: colors.white,
+        color: colors.black,
         fontSize: 20,
         fontFamily: 'Inter_700Bold',
         paddingBottom: 150,

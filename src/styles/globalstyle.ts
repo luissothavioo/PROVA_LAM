@@ -22,7 +22,7 @@ export const styleContainer = StyleSheet.create({
 
 export const styleText = StyleSheet.create({
     textTitle: {
-        color: colors.white,
+        color: colors.black,
         fontSize: 75,
         fontFamily: 'Offside_400Regular',
         textAlign: "center",

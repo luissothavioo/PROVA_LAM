@@ -1,15 +1,14 @@
 import { createBottomTabNavigator, BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import { Home, Plantas, Todas, Informações } from '../screens';
+import { Home} from '../screens';
 import { FontAwesome, Ionicons, Entypo, FontAwesome5 } from '@expo/vector-icons';
 import { colors } from "../styles/globalstyle"
-import { MessageNavigation } from './message.navigation'
+import { ScreenCamera, ScreenImagens, ScreenQrCode } from '../screens';
 
 type MenuTabParam = {
     HomeInicial: undefined
-    Plantas: undefined
-    Todas: undefined
-    Informações: undefined
-    Mensagem: undefined
+    Camera: undefined
+    Imagem: undefined
+    QrCode: undefined
 }
 type MenuScreenNavigation = BottomTabNavigationProp<MenuTabParam, "HomeInicial">
 export type MenuTabTypes = {
@@ -35,33 +34,25 @@ export function MenuTabs() {
                     )
                 }}
             />
-            <Tab.Screen name="Plantas" component={Plantas}
+            <Tab.Screen name="Camera" component={ScreenCamera}
                 options={{
                     tabBarIcon: () => (
-                        <Ionicons name="flower" size={25} color={colors.white} />
-                    )
-                    
-                }}
-            />
-            <Tab.Screen name="Todas" component={Todas}
-                options={{
-                    tabBarIcon: () => (
-                        <FontAwesome5 name="search" size={23} color={colors.white} />
+                        <FontAwesome name="home" size={26} color={colors.white} />
                     )
                 }}
             />
-            <Tab.Screen name="Informações" component={Informações}
+            <Tab.Screen name="Imagem" component={ScreenImagens}
                 options={{
                     tabBarIcon: () => (
-                        <FontAwesome5 name="book" size={23} color={colors.white} />
+                        <FontAwesome name="home" size={26} color={colors.white} />
                     )
                 }}
             />
-            <Tab.Screen name="Mensagem" component={MessageNavigation}
+            <Tab.Screen name="QrCode" component={ScreenQrCode}
                 options={{
                     tabBarIcon: () => (
-                        <Entypo name="chat" size={24} color={colors.white} />
-                    ),
+                        <FontAwesome name="home" size={26} color={colors.white} />
+                    )
                 }}
             />
         </Tab.Navigator>

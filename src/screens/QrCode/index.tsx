@@ -21,13 +21,13 @@ export function QrCode() {
         );
     }
     function handleBarcodeScanner({ data }: BarcodeScanningResult) {
-        Alert.alert(`Olá ${data}`)
+        Alert.alert(`${data}`)
         setScanned(true)
     }
     return (
         <>
-            {user && user.user.name && (
-                <Image source={{ uri: `https://image-charts.com/chart?chs=500x500&cht=qr&chl=${user.user.name}&choe=UTF-8` }} style={styles.qrcode} />
+            {(
+                <Image source={{ uri: `https://image-charts.com/chart?chs=500x500&cht=qr&chl=${'oi'}&choe=UTF-8` }} style={styles.qrcode} />
             )}
             {!scanned ? (
                 <CameraView

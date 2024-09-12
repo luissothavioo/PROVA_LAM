@@ -19,7 +19,7 @@ export function Imagens() {
         });
         setAlbums(fetchedAlbums);
     }
-    
+
     async function pickImage() {
         let result = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.All,
@@ -35,14 +35,16 @@ export function Imagens() {
 
     return (
         <>
-            <ComponentButtonInterface onPressI={pickImage} title='Abrir Imegem' type='secondary' />
-            <View style={styles.containerImage}>
-                {image && <Image source={{ uri: image }} style={styles.image} />}
+            <View style={styles.container}>
+                <ComponentButtonInterface onPressI={pickImage} title='Abrir Imagem' type='secondary' />
+                <View style={styles.containerImage}>
+                    {image && <Image source={{ uri: image }} style={styles.image} />}
+                </View>
+                <ComponentButtonInterface onPressI={getAlbums} title='Buscar Albuns' type='primary' />
+                <ScrollView>
+                    {albums && albums.map((album) => <ComponentAlbum album={album} />)}
+                </ScrollView>
             </View>
-            <ComponentButtonInterface onPressI={getAlbums} title='Buscar Albuns' type='primary' />
-            <ScrollView>
-                {albums && albums.map((album) => <ComponentAlbum album={album} />)}
-            </ScrollView>
         </>
     );
 }
